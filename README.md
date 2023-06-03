@@ -58,14 +58,14 @@ This application allows a company to view and manage customer information, as we
 |   |-- .gitignore
 |   |-- package.json
 |   |-- data
-|   |   |-- foobar.db
+|   |   |-- demo-db.db
 ```
 
 The directory structure of the application is organized as follows:
 
 - The `front-end` directory contains the React.js front-end code.
 - The `back-end` directory contains the Node.js back-end code with Express.js framework.
-- The `data` directory stores the SQLite database file (`foobar.db`).
+- The `data` directory stores the SQLite database file (`demo-db.db`).
 - The `package.json` files in both directories hold the dependencies and scripts for each part of the application.
 
 ## Usage
