@@ -1,0 +1,19 @@
+{
+  "name": "demo-code",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cycyjing/demo-code.git"
+  },
+  "author": "Yang Cui",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cycyjing/demo-code/issues"
+  },
+  "homepage": "https://github.com/cycyjing/demo-code#readme"
+}
