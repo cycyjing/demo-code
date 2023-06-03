@@ -24,3 +24,11 @@ export const patchStatusChange = async (id, status) => {
     });
 };
 
+export const getAllOpportunities = async (cid) => {
+  return await axios
+    .get(`${baseUrl}/${opportunities}?customer_id=${cid}`)
+    .then((res) => res.data)
+    .catch((error) => {
+      console.error(error);
+    });
+};

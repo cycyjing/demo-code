@@ -1,6 +1,7 @@
 import React from "react";
 import { Drawer } from "antd";
 import CustomerDetails from "./CustomerDetails";
+import Opportunities from "./Opportunities";
 
 const CustomerDetailsAndOpportunitiesDrawer = ({
   isDrawerOpen,
@@ -10,6 +11,7 @@ const CustomerDetailsAndOpportunitiesDrawer = ({
   return (
     <Drawer width="60vw" closable="false" open={isDrawerOpen} onClose={onClose}>
       <CustomerDetails customer={selectedCustomer} />
+      <Opportunities customer={selectedCustomer} />
     </Drawer>
   );
 };
