@@ -2,6 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const customersRouter = require("./app/customers");
+const opportunitiesRouter = require("./app/opportunities");
 
 const app = express();
 const port = 3002;
@@ -15,6 +16,8 @@ app.use(cors());
  */
 // Customer Router
 app.use("/customers", customersRouter);
+// OpportunityRouter
+app.use("/opportunities", opportunitiesRouter);
 
 /**
  * Router end
