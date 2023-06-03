@@ -4,6 +4,7 @@ import { SearchOutlined } from "@ant-design/icons";
 import { getAllCustomers, patchStatusChange } from "../utils";
 import CustomerFilterModel from "../components/CustomerFilterModel";
 import CustomerStatusLink from "../components/CustomerStatusLink";
+import CustomerDetailsAndOpportunitiesDrawer from "../components/CustomerDetailsAndOpportunitiesDrawer";
 
 const Customers = () => {
   const [customers, setCustomers] = useState([]);
@@ -104,6 +105,11 @@ const Customers = () => {
         rowKey={(record) => record.id}
         columns={columns}
         dataSource={customers}
+      />
+      <CustomerDetailsAndOpportunitiesDrawer
+        isDrawerOpen={isDrawerOpen}
+        onClose={closeDrawer}
+        selectedCustomer={selectedCustomer}
       />
     </>
   );
