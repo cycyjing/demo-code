@@ -8,7 +8,6 @@ const useFetchOpportunities = (customerId) => {
   const [opportunities, setOpportunities] = useState([]);
   useEffect(() => {
     getAllOpportunities(customerId).then((res) => {
-      console.log("res", res);
       setOpportunities(res);
     });
   }, [customerId]);

@@ -18,7 +18,6 @@ db.prepare(
 db.prepare(
   `INSERT INTO customers (id,name,email,phone,status,create_time) VALUES (?,?,?,?,?,?)`
 ).run(uuidv4(),"Rick Vasquez","rick.vasquez@example.com","(568) 719-1912","Lead",moment().format());
-console.log('2', 2)
 db.prepare(
   `INSERT INTO customers (id,name,email,phone,status,create_time) VALUES (?,?,?,?,?,?)`
 ).run(uuidv4(),"Tristan Brooks","tristan.brooks@example.com","(732) 308-9555","Non-Active",moment().format());

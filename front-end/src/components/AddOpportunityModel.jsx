@@ -10,7 +10,6 @@ const AddOpportunityModel = ({ customer, onAddOpportunity }) => {
       .then((res) => {
         if (res.status === 201) {
           const data = res.data;
-          console.log("data", data);
           onAddOpportunity({
             ...opportunity,
             id: data.id,

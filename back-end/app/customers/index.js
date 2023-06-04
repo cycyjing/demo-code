@@ -11,7 +11,6 @@ router
     res.json(results);
   })
   .get("/:id", (req, res) => {
-    console.log("req.params.id", req.params.id);
     const results = db
       .prepare(`SELECT * FROM customers WHERE id=?`)
       .all(req.params.id);
@@ -33,14 +32,12 @@ router
         message: "Customer created",
       });
     } catch (error) {
-      console.log("error", error);
       res.status(500).json({
         message: "Customer creates fail!",
       });
     }
   })
   .patch("/:id", (req, res) => {
-    console.log("res", req.body.status, req.params.id);
     const results = db
       .prepare(`UPDATE customers SET status=? WHERE id=?`)
       .run(req.body.status, req.params.id);

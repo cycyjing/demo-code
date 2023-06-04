@@ -11,7 +11,6 @@ const UpdateOpportunityModel = ({ record, onUpdateOp }) => {
   const handleOk = () => {
     patchUpdateOpportunity(record.id, opportunity)
       .then((res) => {
-        console.log("res", res);
         if (res.status === 200) {
           onUpdateOp({
             ...record,
