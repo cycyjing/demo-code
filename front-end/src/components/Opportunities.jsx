@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Table } from "antd";
 import { getAllOpportunities } from "../utils";
+import AddOpportunityModel from "./AddOpportunityModel";
+import UpdateOpportunityModel from "./UpdateOpportunityModel";
 
 const useFetchOpportunities = (customerId) => {
   const [opportunities, setOpportunities] = useState([]);
@@ -45,6 +47,14 @@ const Opportunities = ({ customer }) => {
     {
       title: "Action",
       dataIndex: "action",
+      render: (_, record) => {
+        return (
+          <UpdateOpportunityModel
+            record={record}
+            onUpdateOp={handleUpdateOpportunity}
+          />
+        );
+      },
     },
   ];
   return (
@@ -54,6 +64,10 @@ const Opportunities = ({ customer }) => {
         rowKey={(record) => record.id}
         dataSource={opportunities}
         columns={columns}
+      />
+      <AddOpportunityModel
+        customer={customer}
+        onAddOpportunity={handleAddOpportunity}
       />
     </div>
   );

@@ -32,3 +32,14 @@ export const getAllOpportunities = async (cid) => {
       console.error(error);
     });
 };
+
+export const postAddOpportunity = async (opportunity, cid) => {
+  return await axios.post(`${baseUrl}/${opportunities}`, {
+    ...opportunity,
+    customer_id: cid,
+  });
+};
+
+export const patchUpdateOpportunity = async (id, opportunity) => {
+  return await axios.patch(`${baseUrl}/${opportunities}/${id}`, {...opportunity});
+};
