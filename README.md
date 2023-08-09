@@ -1,5 +1,3 @@
-Thank you for providing the additional information. Based on your responses, here is an updated version of the README document:
-
 # Full-Stack Application
 
 This is a full-stack application built using Node.js with Express.js for the back-end and React.js for the front-end. It provides functionality for managing customer information and recording sales opportunities for each customer. The back-end uses SQLite as the data store.
